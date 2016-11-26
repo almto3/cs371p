@@ -141,6 +141,7 @@ sync:
     --include "Move.c++"                     \
     --include "MethodOverriding1.c++"        \
     --include "MethodOverriding2.c++"        \
+    --include "Classes.c++"                  \
     --exclude "*"                            \
     ../../examples/c++/ examples
 	@rsync -r -t -u -v --delete              \
