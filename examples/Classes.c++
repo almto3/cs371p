@@ -71,10 +71,26 @@ int main () {
     }
 
     {
+    A* p = new A;
+    p->cm();
+    p->im();
+    p->cim();
+    delete p;
+    }
+
+    {
     const A x;
     x.cm();
 //  x.im();    // error: no matching function for call to 'A::im() const'
     x.cim();
+    }
+
+    {
+    const A* p = new A;
+    p->cm();
+//  p->im();            // error: no matching function for call to 'A::im() const'
+    p->cim();
+    delete p;
     }
 
     cout << "Done." << endl;
