@@ -15,7 +15,9 @@ FILES :=          \
     Vector3       \
     Shapes1       \
     Shapes2       \
-    Shapes3
+    Shapes3       \
+    Handle1       \
+    Handle2
 
 ifeq ($(shell uname), Darwin)                                           # Apple
     CXX          := g++

@@ -184,6 +184,7 @@ sync:
     --include "Handle1.c++"                  \
     --include "Handle1.h"                    \
     --include "Handle2.c++"                  \
+    --include "Handle2.h"                    \
     --exclude "*"                            \
     ../../exercises/c++/ exercises
 	@rsync -r -t -u -v --delete              \
