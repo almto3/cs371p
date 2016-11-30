@@ -21,7 +21,9 @@ FILES :=                \
     Move                \
     MethodOverriding1   \
     MethodOverriding2   \
-    Classes
+    Classes             \
+    SharedPtr           \
+    UniquePtr
 
 ifeq ($(shell uname), Darwin)                                           # Apple
     CXX          := g++

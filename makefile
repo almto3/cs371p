@@ -142,6 +142,8 @@ sync:
     --include "MethodOverriding1.c++"        \
     --include "MethodOverriding2.c++"        \
     --include "Classes.c++"                  \
+    --include "SharedPtr.c++"                \
+    --include "UniquePtr.c++"                \
     --exclude "*"                            \
     ../../examples/c++/ examples
 	@rsync -r -t -u -v --delete              \
@@ -185,6 +187,7 @@ sync:
     --include "Handle1.h"                    \
     --include "Handle2.c++"                  \
     --include "Handle2.h"                    \
+    --include "Handle3.c++"                  \
     --exclude "*"                            \
     ../../exercises/c++/ exercises
 	@rsync -r -t -u -v --delete              \
