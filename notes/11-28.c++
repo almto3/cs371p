@@ -1,11 +1,26 @@
-p.im();    // not ok
-*p.im();   // not ok
-(*p).im(); // ok
+struct A {
+    void f           () {}
+    A*   operator -> () {...}
+    A&   operator *  () {...}};
+
+int main () {
+    A* p = new A;
+
+    p.f();    // not ok
+    *p.f();   // not ok
+    (*p).f(); // ok
+    p->f();   // ok
+
+    delete p;
 
 
-*x.move(5, 6);            // not ok
-(*x).move(5, 6);          // ok
-x.operator*().move(5, 6);
+    A x;
 
-x->move(5, 6);
-x.operator->()->move(5, 6);
+    *x.f();            // not ok
+    (*x).f();          // ok
+    x.operator*().f();
+
+    x->f();
+    x.operator->()->f();
+
+    return 0;}
